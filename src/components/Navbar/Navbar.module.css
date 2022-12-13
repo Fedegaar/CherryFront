@@ -1,0 +1,20 @@
+.navMain{
+    background-color: #48C9B0;
+    width: 100%;
+    position: absolute;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.navLogo{
+    list-style: none;
+    
+}
+
+.Link{
+    list-style: none;
+}
