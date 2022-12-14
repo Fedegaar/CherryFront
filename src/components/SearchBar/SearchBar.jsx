@@ -9,7 +9,7 @@ const SearchBar = () => {
 
   useEffect(() => {
     dispatch(getAllProducts())
-  },[])
+  },[dispatch] )
 
   function onInputChange(e){   
     e.preventDefault(); 
@@ -26,7 +26,7 @@ const SearchBar = () => {
 
   return (
     <form  > 
-            <input   type="search" placeholder='Busca un producto' onChange={(e) => onInputChange(e)} value={searches} />
+            <input type="search" placeholder='Busca un producto' onChange={(e) => onInputChange(e)} value={searches} />
             <input type="submit"/>
     </form >
   )

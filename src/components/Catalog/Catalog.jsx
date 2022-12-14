@@ -34,11 +34,10 @@ const Catalog = () => {
                 id = {prod._id}
                 name = {prod.name}
                 image = {prod.image}
-                description = {prod.description}
                 presentation = {prod.presentation}
                 price = {prod.price}
                 active = {prod.active}
-                available = {prod.available}
+                available = {prod.available === true ? "💚" : "❤"}
                 />
               }) } 
             </div>  
