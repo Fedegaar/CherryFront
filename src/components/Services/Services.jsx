@@ -31,6 +31,7 @@ const Services = () => {
                         name = {prod.name}
                         image = {prod.image}
                         price = {prod.price}
+                        description = {prod.description}
                         />
                     })}
                 </div>

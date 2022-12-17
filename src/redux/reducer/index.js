@@ -1,14 +1,18 @@
 import {
-    GET_ALL_PRODUCTS, GET_ALL_SERVICES, SEARCH_BY_NAME,
+    GET_ALL_PRODUCTS, 
+    GET_ALL_SERVICES, 
+    SEARCH_BY_NAME,
+    GET_PRODUCT_DETAIL,
 } from "../actions";
 
 const initialState = {
-        products: [],
-        productsToShow:[],
-        services: []
-    }
+    products: [],
+    productsToShow: [],
+    services: [],
+    productDetail: {}
+}
 
-export default function reducer (state = initialState, {type, payload }) {
+export default function reducer(state = initialState, { type, payload }) {
     switch (type) {
         case GET_ALL_PRODUCTS:
             return {
@@ -17,9 +21,14 @@ export default function reducer (state = initialState, {type, payload }) {
                 productsToShow: payload
             }
         case SEARCH_BY_NAME:
-            return{
+            return {
                 ...state,
                 productsToShow: payload
+            }
+        case GET_PRODUCT_DETAIL:
+            return {
+                ...state,
+                productDetail: payload
             }
         case GET_ALL_SERVICES:
             return {
@@ -27,7 +36,7 @@ export default function reducer (state = initialState, {type, payload }) {
                 services: payload
             }
         default: return {
-                ...state
+            ...state
         }
     }
 }

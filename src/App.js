@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import Catalog from './components/Catalog/Catalog.jsx';
 import Home from './components/Home/Home.jsx'
 import Navbar from './components/Navbar/Navbar.jsx';
+import ProductDetail from './components/ProductDetail/ProductDetail.jsx';
 import Services from './components/Services/Services.jsx';
 
 
@@ -12,6 +13,7 @@ const App = () =>  {
             <Route path="/home" element={<Home/>}/>
             <Route path="/home" element={<Navbar/>}/>
             <Route path="/catalog" element={<Catalog/>} />
+            <Route path="/detail/:id" element={<ProductDetail/>}/>
             <Route path="/services" element={<Services/>} />
 
         </Routes>
