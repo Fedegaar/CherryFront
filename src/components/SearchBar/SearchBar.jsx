@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import { getAllProducts, searchByName } from '../../redux/actions'
+import React, { useState } from 'react'
+import { searchByName } from '../../redux/actions'
 import { useDispatch, useSelector } from 'react-redux';
 
 const SearchBar = () => {
@@ -7,20 +7,11 @@ const SearchBar = () => {
   const [searches, setSearches] = useState(allProducts)
   const dispatch = useDispatch()
 
-
-
   function onInputChange(e){   
     e.preventDefault(); 
     setSearches(e.target.value)
     dispatch(searchByName(e.target.value))
-    console.log(e.target.value, "soy el value del ONINPUTCHANGE")
   }
-  
-  // function onSubmit(e){
-  //   e.preventDefault();
-  //   dispatch(searchByName(searches))
-  //   console.log(searches, "soy searches")
-  // }  
 
   return (
     <form  > 

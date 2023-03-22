@@ -2,7 +2,7 @@ import React from 'react'
 import s from './Card.module.css'
 import { Link } from 'react-router-dom'
 
-const Card = ({name, image, description, presentation, active, price, available, duration, type, id}) => {
+const Card = ({name, image, description, presentation, active, price, available, duration, type, id, mark}) => {
   return (    
     <Link to={`/detail/${id}`}>
         <div className={s.cardMain}>
@@ -12,6 +12,7 @@ const Card = ({name, image, description, presentation, active, price, available,
           <span>{description}</span>
           <span>{active}</span>
           <span>${price}</span>
+          <span>{mark}</span>
         </div>
     </Link>  
   )

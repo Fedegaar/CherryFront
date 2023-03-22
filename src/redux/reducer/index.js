@@ -3,6 +3,7 @@ import {
     GET_ALL_SERVICES, 
     SEARCH_BY_NAME,
     GET_PRODUCT_DETAIL,
+    CLEAR_DETAIL
 } from "../actions";
 
 const initialState = {
@@ -29,6 +30,11 @@ export default function reducer(state = initialState, { type, payload }) {
             return {
                 ...state,
                 productDetail: payload
+            }
+        case CLEAR_DETAIL:
+            return {
+                ...state,
+                productDetail: {}
             }
         case GET_ALL_SERVICES:
             return {
